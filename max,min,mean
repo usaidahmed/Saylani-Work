@@ -1,0 +1,32 @@
+import random
+array_of_random = []
+for arr in range(10):
+    array_of_random.append(random.randint(1,100))
+    print(array_of_random)
+# for length
+length = 0
+for a in array_of_random:
+    length += 1
+# for min value
+min_value = array_of_random[0]
+index_min = 0
+for a in range(len(array_of_random)):
+    if min_value > array_of_random[a]:
+        min_value = array_of_random[a]
+        index_min = a
+print(min_value)
+print(index_min)
+# for max value
+max_value = array_of_random[0]
+for a in array_of_random:
+    if max_value < a:
+        max_value = a
+        index_max = array_of_random.index(a)
+print(max_value)
+print(index_max)
+# for mean 
+total_sum = 0
+for i in range(length):
+    total_sum +=array_of_random[i]
+mean = total_sum / length
+print(mean)
